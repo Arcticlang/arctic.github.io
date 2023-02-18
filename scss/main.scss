@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@font-face {
+    font-family: SnowtopCaps;
+    src: url("fonts/SnowtopCaps");
+}
+
+body,
+html {
+    margin: 0;
+    height: 100vh;
+    font-family: "Montserrat";
+    color: white;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+* {
+    font-family: "Montserrat";
+    margin: 0;
+}
+
+@keyframes nav_link_slide {
+    from {
+        transform: rotate(-5deg);
+        top: -50px;
+    }
+    to {
+        transform: rotate(0deg);
+        top: 0;
+    }
+}
+
+nav {
+    transition-duration: 500ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    z-index: 999;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+        height: 60px;
+    }
+
+    & .links {
+        display: flex;
+        gap: 30px;
+        & .link {
+            transition-duration: 500ms;
+            top: -50px;
+            position: relative;
+            animation: nav_link_slide 2s;
+            animation-fill-mode: forwards;
+            color: white;
+            text-decoration: none;
+
+            &:nth-child(2) {
+                animation-delay: 200ms;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 400ms;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &:hover {
+            & > * {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+main {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    height: 100vh;
+    width: 100vw;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //position: absolute;
+    top: 0;
+    background: url(https://images.unsplash.com/photo-1418985991508-e47386d96a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwzfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080)
+            0 0 no-repeat,
+        linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgba(0, 0, 0, 1) 100%);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    backdrop-filter: blur(200px);
+
+    & .title {
+        transition-duration: 500ms;
+        text-transform: uppercase;
+        //font-weight: bold;
+        font-size: 10rem;
+        margin: 0;
+
+        & .letter {
+            margin: 0;
+            display: inline-block;
+            $letter-anim-speed: 2s;
+            position: relative;
+            &:nth-child(1) {
+                @keyframes letter_1 {
+                    from {
+                        transform: rotate(20deg);
+                        left: -20px;
+                        top: -20px;
+                    } to {
+                        transform: rotate(0);
+                        left: 20px;
+                        top: 0;
+                    }
+                }
+
+                animation: letter_1 $letter-anim-speed;
+                animation-fill-mode: forwards;
+            }
+
+            &:nth-child(2) {
+                @keyframes letter_2 {
+                    from {
+                        //transform: rotate(35deg);
+                        left: -16px;
+                        top: 0px;
+                    } to {
+                        //transform: rotate(0);
+                        left: 16px;
+                        top: 0;
+                    }
+                }
+
+                animation: letter_2 $letter-anim-speed;
+                animation-fill-mode: forwards;
+            }
+
+            &:nth-child(3) {
+                @keyframes letter_3 {
+                    from {
+                        left: -12px;
+                    } to {
+                        left: 12px;
+                    }
+                }
+
+                animation: letter_3 $letter-anim-speed;
+                animation-fill-mode: forwards;
+                margin-right: 10px;
+            }
+
+            &:nth-child(4) {
+                @keyframes letter_4 {
+                    from {
+                        left: 12px;
+                    } to {
+                        left: -12px;
+                    }
+                }
+
+                animation: letter_4 $letter-anim-speed;
+                animation-fill-mode: forwards;
+            }         
+
+            &:nth-child(5) {
+                @keyframes letter_5 {
+                    from {
+                        left: 16px;
+                    } to {
+                        left: -16px;
+                    }
+                }
+
+                animation: letter_5 $letter-anim-speed;
+                animation-fill-mode: forwards;
+            }
+
+            &:nth-child(6) {
+                @keyframes letter_6 {
+                    from {
+                        transform: rotate(-20deg);
+                        left: 20px;
+                        top: -20px;
+                    } to {
+                        transform: rotate(0deg);
+                        left: -20px;
+                        top: 0;
+                    }
+                }
+
+                animation: letter_6 $letter-anim-speed;
+                animation-fill-mode: forwards;
+            }
+
+            font-family: SnowtopCaps;
+        }
+    }
+
+    & .slogan {
+        color: grey;
+
+        @keyframes slogan_slide_in {
+            from {
+                transform: rotate(-5deg) translateY(100px);
+            } to {
+                transform: rotate(0deg) translateY(0px);
+            }
+        }
+
+        animation: slogan_slide_in 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+#example {
+    background: url(https://images.unsplash.com/photo-1515133997814-e6460be24073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080)
+    0 0 no-repeat,
+    linear-gradient(rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.8) 100%);
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .left {
+
+        @keyframes word_slide_in {
+            from {
+                bottom: -200px;
+                opacity: 0;
+            } to {
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+
+        & .text {
+            text-align: center;
+            position: relative;
+            font-size: 1.2rem;
+            color: grey;
+            opacity: 0;
+        }
+
+        & .word {
+            font-size: 4rem;
+            position: relative;
+            bottom: -200px;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        
+        & h1 {
+            display: flex;
+            gap: 20px;
+        }
+    
+        &.show {
+            & .word {
+                transition-duration: 500ms;
+                animation: word_slide_in 1s;
+                animation-fill-mode: forwards;
+
+                &:nth-child(2) {
+                    animation-delay: 400ms;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 800ms;
+                }
+
+                &:hover {
+                    font-family: monospace;
+                }
+            }
+
+            & .text {
+                animation: word_slide_in 2s;
+                animation-delay: 1600ms;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    & .right {
+
+        &.show {
+            @keyframes animate_snippet {
+                from {
+                    transform: rotate(25deg);
+                    left: 800px;
+                } to {
+                    transform: rotate(0);
+                    left: 0;
+                }
+            }
+
+            & .snippet {
+                animation: animate_snippet 3s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        & .snippet {
+            left: 800px;
+            position: relative;
+            transform: rotate(25deg);
+            /* From https://css.glass */
+            background: rgba(40, 44, 52, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(40, 44, 52, 0.3);
+            padding: 20px;
+            width: 90%;
+            height: 350px;
+
+            & pre {
+                font-family: monospace;
+                font-size: 14px;
+
+                & > * {
+                    font-family: monospace;
+                }
+            }
+
+            & .comment {
+                color: #ABB2BF
+            }
+
+            & .keyword {
+                color: #C678DD
+            }
+            
+            & .symbol {
+                color: #E5C07B
+            }
+
+            & .literal {
+                color: #61AFEF
+            }
+
+            & .operator {
+                color: #56B6C2
+            }
+
+            & .string {
+                color: #98C379;
+            }
+        }
+    }
+}
+
+.link-icons {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+    align-items: center;
+
+    & .icon {
+        $hover-color: white;
+        transition-duration: 250ms;
+        @keyframes icon_enter {
+            from {
+                transform: rotate(360deg);
+                font-size: 0;
+            } to {
+                transform: rotate(0);
+                font-size: 1.5rem;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(360deg);
+            } to {
+                transform: rotate(0);
+            }
+        }      
+
+        font-size: 0;
+        animation: icon_enter 1s;
+        animation-fill-mode: forwards;
+        color: grey;
+
+        &:hover {
+            color: $hover-color;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 200ms;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 400ms;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 950px) {
+    nav {
+        & .link {
+            font-size: 0.8rem;
+        }
+    }
+
+    #hero {
+        & .title {
+            font-size: 5rem;
+        }
+    }
+
+    #example {
+        background: url(https://images.unsplash.com/photo-1515133997814-e6460be24073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080)
+        0 0 no-repeat,
+        linear-gradient(rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.8) 100%);
+        background-blend-mode: multiply;
+        background-size: cover;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+    
+        & > * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & .right {
+
+            &.show {
+                & .snippet {
+                    animation: none;
+                }
+            }
+
+            & .snippet {
+                left: 0;
+                transform: rotate(0);
+                width: 80vw;
+                height: 70%;
+
+                & pre {
+                    font-family: monospace;
+                    font-size: 11px;
+    
+                    & > * {
+                        font-family: monospace;
+                    }
+                }
+            }
+        }
+
+        & .left {
+            & .text {
+                font-size: 1rem;
+            }
+    
+            @keyframes word_slide_in {
+                from {
+                    bottom: -200px;
+                    opacity: 0;
+                } to {
+                    bottom: 0;
+                    opacity: 1;
+                }
+            }
+    
+            & .word {
+                font-size: 2rem;
+                position: relative;
+                bottom: -200px;
+                opacity: 0;
+                animation-fill-mode: forwards;
+            }
+            
+            & h1 {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+        
+            &.show {
+                & .word {
+                    text-align: center;
+                    animation: word_slide_in 1s;
+                    animation-fill-mode: forwards;
+    
+                    &:nth-child(2) {
+                        animation-delay: 400ms;
+                    }
+    
+                    &:nth-child(3) {
+                        animation-delay: 800ms;
+                    }
+                }
+            }
+        }
+    }
+}

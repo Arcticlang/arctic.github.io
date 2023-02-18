@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@font-face {
+  font-family: SnowtopCaps;
+  src: url("fonts/SnowtopCaps");
+}
+body,
+html {
+  margin: 0;
+  height: 100vh;
+  font-family: "Montserrat";
+  color: white;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+@keyframes nav_link_slide {
+  from {
+    transform: rotate(-5deg);
+    top: -50px;
+  }
+  to {
+    transform: rotate(0deg);
+    top: 0;
+  }
+}
+nav {
+  transition-duration: 500ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  z-index: 999;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+nav:hover {
+  background: rgba(0, 0, 0, 0.2);
+  height: 60px;
+}
+nav .links {
+  display: flex;
+  gap: 30px;
+}
+nav .links .link {
+  transition-duration: 500ms;
+  top: -50px;
+  position: relative;
+  animation: nav_link_slide 2s;
+  animation-fill-mode: forwards;
+  color: white;
+  text-decoration: none;
+}
+nav .links .link:nth-child(2) {
+  animation-delay: 200ms;
+}
+nav .links .link:nth-child(3) {
+  animation-delay: 400ms;
+}
+nav .links .link:hover {
+  opacity: 1;
+}
+nav .links:hover > * {
+  opacity: 0.5;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu {
+  height: 100vh;
+  width: 100vw;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background: url(https://images.unsplash.com/photo-1418985991508-e47386d96a71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwzfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080) 0 0 no-repeat, linear-gradient(rgba(0, 0, 0, 0.8) 25%, rgb(0, 0, 0) 100%);
+  background-blend-mode: multiply;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+}
+#hero .title {
+  transition-duration: 500ms;
+  text-transform: uppercase;
+  font-size: 10rem;
+  margin: 0;
+}
+#hero .title .letter {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  font-family: SnowtopCaps;
+}
+#hero .title .letter:nth-child(1) {
+  animation: letter_1 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter_1 {
+  from {
+    transform: rotate(20deg);
+    left: -20px;
+    top: -20px;
+  }
+  to {
+    transform: rotate(0);
+    left: 20px;
+    top: 0;
+  }
+}
+#hero .title .letter:nth-child(2) {
+  animation: letter_2 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter_2 {
+  from {
+    left: -16px;
+    top: 0px;
+  }
+  to {
+    left: 16px;
+    top: 0;
+  }
+}
+#hero .title .letter:nth-child(3) {
+  animation: letter_3 2s;
+  animation-fill-mode: forwards;
+  margin-right: 10px;
+}
+@keyframes letter_3 {
+  from {
+    left: -12px;
+  }
+  to {
+    left: 12px;
+  }
+}
+#hero .title .letter:nth-child(4) {
+  animation: letter_4 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter_4 {
+  from {
+    left: 12px;
+  }
+  to {
+    left: -12px;
+  }
+}
+#hero .title .letter:nth-child(5) {
+  animation: letter_5 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter_5 {
+  from {
+    left: 16px;
+  }
+  to {
+    left: -16px;
+  }
+}
+#hero .title .letter:nth-child(6) {
+  animation: letter_6 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes letter_6 {
+  from {
+    transform: rotate(-20deg);
+    left: 20px;
+    top: -20px;
+  }
+  to {
+    transform: rotate(0deg);
+    left: -20px;
+    top: 0;
+  }
+}
+#hero .slogan {
+  color: grey;
+  animation: slogan_slide_in 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes slogan_slide_in {
+  from {
+    transform: rotate(-5deg) translateY(100px);
+  }
+  to {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+
+#example {
+  background: url(https://images.unsplash.com/photo-1515133997814-e6460be24073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080) 0 0 no-repeat, linear-gradient(rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 100%);
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#example > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes word_slide_in {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+#example .left .text {
+  text-align: center;
+  position: relative;
+  font-size: 1.2rem;
+  color: grey;
+  opacity: 0;
+}
+#example .left .word {
+  font-size: 4rem;
+  position: relative;
+  bottom: -200px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+#example .left h1 {
+  display: flex;
+  gap: 20px;
+}
+#example .left.show .word {
+  transition-duration: 500ms;
+  animation: word_slide_in 1s;
+  animation-fill-mode: forwards;
+}
+#example .left.show .word:nth-child(2) {
+  animation-delay: 400ms;
+}
+#example .left.show .word:nth-child(3) {
+  animation-delay: 800ms;
+}
+#example .left.show .word:hover {
+  font-family: monospace;
+}
+#example .left.show .text {
+  animation: word_slide_in 2s;
+  animation-delay: 1600ms;
+  animation-fill-mode: forwards;
+}
+@keyframes animate_snippet {
+  from {
+    transform: rotate(25deg);
+    left: 800px;
+  }
+  to {
+    transform: rotate(0);
+    left: 0;
+  }
+}
+#example .right.show .snippet {
+  animation: animate_snippet 3s;
+  animation-fill-mode: forwards;
+}
+#example .right .snippet {
+  left: 800px;
+  position: relative;
+  transform: rotate(25deg);
+  /* From https://css.glass */
+  background: rgba(40, 44, 52, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(40, 44, 52, 0.3);
+  padding: 20px;
+  width: 90%;
+  height: 350px;
+}
+#example .right .snippet pre {
+  font-family: monospace;
+  font-size: 14px;
+}
+#example .right .snippet pre > * {
+  font-family: monospace;
+}
+#example .right .snippet .comment {
+  color: #ABB2BF;
+}
+#example .right .snippet .keyword {
+  color: #C678DD;
+}
+#example .right .snippet .symbol {
+  color: #E5C07B;
+}
+#example .right .snippet .literal {
+  color: #61AFEF;
+}
+#example .right .snippet .operator {
+  color: #56B6C2;
+}
+#example .right .snippet .string {
+  color: #98C379;
+}
+
+.link-icons {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+  align-items: center;
+}
+.link-icons .icon {
+  transition-duration: 250ms;
+  font-size: 0;
+  animation: icon_enter 1s;
+  animation-fill-mode: forwards;
+  color: grey;
+}
+@keyframes icon_enter {
+  from {
+    transform: rotate(360deg);
+    font-size: 0;
+  }
+  to {
+    transform: rotate(0);
+    font-size: 1.5rem;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+.link-icons .icon:hover {
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.link-icons .icon:nth-child(2) {
+  animation-delay: 200ms;
+}
+.link-icons .icon:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+@media only screen and (max-width: 950px) {
+  nav .link {
+    font-size: 0.8rem;
+  }
+  #hero .title {
+    font-size: 5rem;
+  }
+  #example {
+    background: url(https://images.unsplash.com/photo-1515133997814-e6460be24073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTgwOTN8MHwxfHNlYXJjaHwxfHxhcmN0aWN8ZW58MHx8fHwxNjc2NTk3NzE0&ixlib=rb-4.0.3&q=80&w=1080) 0 0 no-repeat, linear-gradient(rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 100%);
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  #example > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #example .right.show .snippet {
+    animation: none;
+  }
+  #example .right .snippet {
+    left: 0;
+    transform: rotate(0);
+    width: 80vw;
+    height: 70%;
+  }
+  #example .right .snippet pre {
+    font-family: monospace;
+    font-size: 11px;
+  }
+  #example .right .snippet pre > * {
+    font-family: monospace;
+  }
+  #example .left .text {
+    font-size: 1rem;
+  }
+  @keyframes word_slide_in {
+    from {
+      bottom: -200px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+  #example .left .word {
+    font-size: 2rem;
+    position: relative;
+    bottom: -200px;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  #example .left h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  #example .left.show .word {
+    text-align: center;
+    animation: word_slide_in 1s;
+    animation-fill-mode: forwards;
+  }
+  #example .left.show .word:nth-child(2) {
+    animation-delay: 400ms;
+  }
+  #example .left.show .word:nth-child(3) {
+    animation-delay: 800ms;
+  }
+}/*# sourceMappingURL=main.css.map */

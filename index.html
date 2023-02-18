@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arctic</title>
+
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="colors.css" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="https://kit.fontawesome.com/fa7fdc7b9f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="links">
+                <a href="" class="link">HOME</a>
+                <a href="" class="link">DOCUMENTATION</a>
+                <a href="" class="link">INSTALLATION</a>
+            </div>
+        </nav>
+        <main>
+            <div id="hero" class="menu">
+                <h1
+                    class="title"
+                    data-switching="false"
+                    data-glitch-speed="30"
+                >
+                    <span class="letter">A</span>
+                    <span class="letter">R</span>
+                    <span class="letter">C</span>
+                    <span class="letter">T</span>
+                    <span class="letter">I</span>
+                    <span class="letter">C</span>
+                </h1>
+                <div class="link-icons">
+                    <a class="icon" href="/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a class="icon" href="/" target="_blank"><i class="fa-brands fa-npm"></i></a>
+                    <a class="icon" href="/" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                </div>
+                <h4 class="slogan glitch-effect glitch-effect-start" data-switching="false">Your perfect programming language.</h4>
+            </div>
+            <div id="example" class="menu children-intersection">
+                <div class="left">
+                    <h1>
+                        <span class="word glitch-effect" data-glitch-speed="60">Simple.</span>
+                        <span class="word glitch-effect" data-glitch-speed="60">Easy.</span>
+                        <span class="word glitch-effect" data-glitch-speed="60">Fast.</span>
+                    </h1>
+                    <p class="text">Arctic removes the hassle from creating software.</p>
+                </div>
+                <div class="right">
+                    <div class="snippet">
+                        <pre>
+<span class="comment">// Arctic 0.0.0</span>
+
+<span class="keyword">string</span> fizzbuzz<span class="symbol">(</span><span class="keyword">number</span> i<span class="symbol">)</span> <span class="symbol">{</span>
+    <span class="keyword">if</span> <span class="symbol">(</span>i <span class="operator">%</span> <span class="literal">3</span> <span class="operator">==</span> <span class="literal">0</span> <span class="operator">&&</span> i <span class="operator">%</span> <span class="literal">5</span> <span class="operator">==</span> <span class="literal">0</span><span class="symbol">)</span> <span class="symbol">{</span>
+        <span class="keyword">return</span> <span class="string">"FizzBuzz"</span>
+    <span class="symbol">}</span> <span class="keyword">elif</span> <span class="symbol">(</span>i <span class="operator">%</span> <span class="literal">3</span> <span class="operator">==</span> <span class="literal">0</span><span class="symbol">)</span> <span class="symbol">{</span>
+        <span class="keyword">return</span> <span class="string">"Fizz"</span>
+    <span class="symbol">}</span> <span class="keyword">elif</span> <span class="symbol">(</span>i <span class="operator">%</span> <span class="literal">5</span> <span class="operator">==</span> <span class="literal">0</span><span class="symbol">)</span> <span class="symbol">{</span>
+        <span class="keyword">return</span> <span class="string">"Buzz"</span>
+    <span class="symbol">}</span>
+<span class="symbol">}</span>
+
+<span class="keyword">for</span> <span class="symbol">(</span><span class="keyword">number</span> i <soan class="operator">=</soan> <span class="literal">0</span><span class="symbol">;</span> i <span class="operator">&gt</span> <span class="literal">100</span><span class="symbol">;</span> i++<span class="symbol">)</span> <span class="symbol">{</span>
+    println(<span class="keyword">&lt;string&gt;</span>i <span class="operator">+</span>
+                 <span class="string">": "</span> <span class="operator">+</span>
+            <span class="keyword">&lt;string&gt;</span>fizzbuzz(i)
+           )
+<span class="symbol">}</span>
+<!--<span class="keyword">number</span> add <span class="symbol">(</span><span class="keyword">number</span> a, <span class="keyword">number</span> b<span class="symbol">)</span> <span class="symbol">{</span>
+    <span class="keyword">return</span> a <span class="operator">+</span> b
+<span class="symbol">}</span>-->
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="effects.js"></script>
+    </body>
+</html>

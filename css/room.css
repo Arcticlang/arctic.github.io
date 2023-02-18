@@ -1,0 +1,73 @@
+#roommenu {
+  display: grid;
+  grid-template-columns: 25% 70%;
+  height: 100%;
+  width: 100%;
+}
+#roommenu .flashcards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow-y: scroll;
+  gap: 10px;
+  background: #f7f7f7;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+#roommenu .flashcards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 25px;
+  background: #ddd;
+  color: #222;
+}
+#roommenu .flashcards .card .title {
+  color: black;
+}
+#roommenu .flashcards::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #roommenu {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    height: 100%;
+    width: 100%;
+  }
+  #roommenu .flashcards {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0;
+  }
+  #roommenu .flashcards h2 {
+    font-size: 0;
+  }
+  #roommenu .flashcards .card {
+    gap: 20px;
+    flex-direction: row;
+    padding: 10px 40px;
+    height: 90%;
+  }
+  #roommenu .flashcards .card .title {
+    text-overflow: clip;
+    height: 100%;
+  }
+  #roommenu .flashcards .card .answer {
+    display: flex;
+    text-align: center;
+    height: 100%;
+    text-overflow: clip;
+    overflow-y: scroll;
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=room.css.map */

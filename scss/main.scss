@@ -117,6 +117,8 @@ main {
         //font-weight: bold;
         font-size: 10rem;
         margin: 0;
+        display: flex;
+        gap: 30px;
 
         & .letter {
             margin: 0;
